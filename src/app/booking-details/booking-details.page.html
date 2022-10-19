@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar class="mytoolbar">
+    <ion-title class="title">Reserve a Car</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" class="menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-container">
+  <form #form="ngForm" (ngSubmit)="onSubmit()" class="form">
+    <ion-label class="label">Pickup</ion-label>
+    <ion-card class="container">
+      <ion-item class="form-item">
+        <ion-input #locationInput="ngModel" ngModel type="text" name="locationInput" placeholder="Address"
+          (change)="log(locationInput)" required>
+          <ion-icon name="location" class="icon"></ion-icon>
+        </ion-input>
+        <div class="danger-alert" *ngIf=" locationInput.touched && !locationInput.valid">
+          <div *ngIf="locationInput.errors.required">Location is required</div>
+        </div>
+      </ion-item>
+      <ion-item class="form-item">
+        <ion-input #dateInput="ngModel" ngModel type="date" name="dateInput"
+          (change)="log(dateInput)" required>
+        </ion-input>
+        <div class="danger-alert" *ngIf=" dateInput.touched && !dateInput.valid">
+          <div *ngIf="dateInput.errors.required">Date is required</div>
+        </div>
+      </ion-item>
+    </ion-card>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      
+    <ion-label class="label">Return</ion-label>
+    <ion-card>
+      <ion-item class="form-item">
+        <ion-input #dateInput="ngModel" ngModel type="date" name="dateInput" 
+          (change)="log(dateInput)" required>
+        </ion-input>
+        <div class="danger-alert" *ngIf=" dateInput.touched && !dateInput.valid">
+          <div *ngIf="dateInput.errors.required">Return date is required</div>
+        </div>
+      </ion-item> 
+    </ion-card>
+    </form>
+   <div class="mypop">
+    <table>
+      <tr>
+        <td><p>Return at different location</p></td>
+        <td><ion-toggle class="toggle"></ion-toggle></td>
+      </tr>
+    </table>
+    </div> 
+     
+    <button [disabled]="!form.valid" class="btn" type="submit" expand="block"
+      routerLink="/user-reservation-details">Continue</button>
+
+  </form>
+
+</ion-content>

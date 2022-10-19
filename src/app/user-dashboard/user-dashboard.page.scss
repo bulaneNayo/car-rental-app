@@ -1,0 +1,82 @@
+.table-data-img{
+    margin: 5px;
+}
+.location-btn{
+    --ion-background-color: aliceblue;
+    width:90px;
+    height: 50px;
+    color:black;
+    border-radius: 4px;
+}
+
+.menu{
+    color:white;
+    font-weight: bold;
+}  
+.logout{
+    
+    color:white;
+    font-weight: bold;
+}
+
+.myserach{
+    --ion-background-color: aliceblue;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+.header{
+    position: relative;
+    bottom: 2px;
+    --ion-background-color:rgb(0, 157, 255);
+    height: 70px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.h3-data{
+    margin-left: -90px;
+}
+.p-data{
+    margin-left: -150px;
+}
+.buttons{
+    height: 35px;
+    width: 100px;
+    font-weight: bold;
+    margin-left: 5px;
+
+}
+.mybutton{
+    cursor:pointer;
+}
+#map{
+    display:none;
+}
+.mytabs input[type="radio"]:checked + label + #map{
+    display:block;
+  }
+  .mytabs input[type="radio"]{
+    display:none;
+  }
+  .mytabs label:hover{
+    background-color:blue;
+    color:white;
+  }
+  .mytabs{
+    display: flex;
+    flex-wrap: wrap;
+  }
+.menu{
+    color:black;
+    visibility: visible;
+}
+.link{
+    text-decoration: none;
+    margin-left: 5px;
+}
+/* .container{
+    box-shadow: 2px;
+    margin-top: 10px ;
+    border-radius: 4px;
+} 
+ */

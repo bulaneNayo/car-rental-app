@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Edit Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div>
+
+  <ion-card-header>
+    <ion-card-title>
+      <ion-grid>
+        <ion-row>
+          
+          <ion-col>
+            <ion-button fill="solid" color="danger" size="small" (click)="Delete()">
+              Delete
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button fill="solid" color="success" size="small" (click)="Update()">
+              Update
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button fill="solid" color="medium" size="small" (click)="item.isEdit = false">
+              Cancel
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item *ngFor="let vehicle of vehicles | async" (click)="delete()">
+      <ion-label>
+        {{vehicle.id}}<br>
+        {{vehicle.name}}<br>
+        {{vehicle.price}}
+      </ion-label>
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label position="floating"><strong>Name</strong></ion-label>
+      <ion-input type="text" [(ngModel)]="item.EditName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"><strong>Model</strong></ion-label>
+      <ion-input type="text" [(ngModel)]="item.EditModel"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"><strong>Price</strong></ion-label>
+      <ion-input type="text" [(ngModel)]="item.EditPrice"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"><strong>Mileage</strong></ion-label>
+      <ion-input type="text" [(ngModel)]="item.EditMileage"></ion-input>
+    </ion-item>
+  --> </ion-card-content>
+
+ <!--  <ion-button (click)="Update()">Update</ion-button>
+  <ion-button (click)="delete()">Delete</ion-button>
+ -->
+</div>
+</ion-content>

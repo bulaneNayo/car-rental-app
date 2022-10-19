@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar class="header">   
+    <ion-buttons slot="end">
+      <ion-button (click)="Logout()" class="logout">
+        Logout
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="search for vehicles to edit" debounce="500" animated class="myserach"></ion-searchbar>
+    
+  <ion-list>
+    <ion-item *ngFor="let vehicle of vehicles | async" (click)="openDetails($event,vehicle)">
+      <ion-thumbnail>
+        <ion-img [src]="vehicle.image"></ion-img>
+      </ion-thumbnail>
+       <ion-label class="mylabel">
+        <b>{{vehicle.name}}</b><br>
+      </ion-label>
+      </ion-item>
+     
+      </ion-list>
+  
+</ion-content>

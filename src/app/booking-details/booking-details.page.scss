@@ -1,0 +1,64 @@
+
+.label{
+    margin-top: 80px;
+    margin-bottom: 15px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.menu{
+    color:white;
+    font-weight: bold;
+  }  
+
+  .title{
+    color:white;
+    margin-left: 40px;
+  
+  }
+.mytoolbar{
+     
+  position: relative;
+  bottom: 2px;
+  --ion-background-color:rgb(0, 157, 255);
+  height: 70px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.container{
+    border-radius: 2px;
+    box-shadow: none;
+}
+.icon{
+    margin-right: 4px;
+}
+.danger-alert{
+    color: red;
+    font-size: 12px;
+}
+.btn{
+    background-color:  rgb(0, 157, 255);
+    color: rgb(245, 245, 248);
+    text-transform: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 4px;
+    margin-left: 25%;
+    font-size: large;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+.text{
+    color: white;
+}
+.toggle{
+    margin-left: 6px;
+}
+.toggle::before{
+    color: rgb(62, 59, 59);
+}
+
+.form{
+    margin-top: 30px;
+    margin-left: 20px;
+}

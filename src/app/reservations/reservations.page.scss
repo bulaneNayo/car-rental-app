@@ -1,0 +1,82 @@
+.mytabs{
+  display: flex;
+  flex-wrap: wrap;
+}
+.mytabs input[type="radio"]{
+  display:none;
+}
+.mytabs label{
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  margin-left: 10px;
+
+}
+.title{
+  color:white;
+  margin-left: 40px;
+
+}
+
+.menu{
+  color:white;
+  font-weight: bold;
+}  
+.myserach{
+  --ion-background-color: aliceblue;
+  border-radius: 4px;
+  margin-top: 20px;
+
+}
+.header{
+  position: relative;
+  bottom: 2px;
+  --ion-background-color:rgb(0, 157, 255);
+  height: 70px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.tab{
+  margin-left: 10px;
+}
+.mytabs .tab{
+  width: 100%;
+  order: 1;
+  display:none;
+
+}
+.thumb{
+  size: 50px;
+}
+.mylist .myitem .mytabs input[type="radio"]:checked + label + .tab{
+  display:block;
+}
+.mytabs input[type="radio"]:checked + label{
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color:rgb(12, 65, 65);
+}
+.mytabs label:hover{
+  background-color:gray;
+}
+.price{
+  color:blue;
+  font-weight: bold;
+}
+.car-name{
+  font-weight:bold;
+  margin-top:10px ;
+}
+.per-day{
+  color:blue;
+}
+.mybutton{
+  float: left;
+  margin-left: 40px;
+
+}

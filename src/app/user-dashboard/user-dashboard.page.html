@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar class="header">
+    
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" class="menu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="Logout()" class="logout">
+        Logout
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="container">
+    <ion-searchbar placeholder="search for brokers nearby" [formControl]="searchField"  debounce="500" animated class="myserach"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let company of companies | async" (click)="openItemClick($event)">
+
+         <ion-label class="mylabel">
+         <b> {{company.name}}</b><br>
+         <p> {{company.location}}</p><br>
+         <p><b>Operating Hours:</b> {{company.time}}</p> 
+        </ion-label>
+        <ion-row slot="end" class="myrow">
+          <ion-col size="5">
+            <button (click)="getLocation($event)" class="location-btn">Location</button>
+          </ion-col>
+        </ion-row>
+      
+      </ion-item>
+    </ion-list>
+    <!-- <ion-card class="sub-container">
+      <ion-list>
+        <ion-item (click)="expanded = !expanded" class="myitem">
+          <ion-label>
+            Faiza Motors
+          </ion-label>
+          <div  class="mytabs" [hidden]="!expanded">
+            
+              <input type="radio" id="tabLocation" name="mytabs"/>
+              <label for="tabLocation">Location</label>
+
+              <! <div id="map" style="width:100%;height: 60%;" ></div> -->
+
+           <!-- <p>Hours:</p>
+            <div>
+              <a href="/reservations" class="link">Explore available vehiles?</a> 
+            </div>
+          </div>
+        </ion-item>
+        <ion-item>
+          <ion-label>Toyota</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Bulane Rentals</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Another</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Super World</ion-label>
+        </ion-item>
+      </ion-list>
+        <a href="/reservations" class="link">Explore available vehiles?</a> 
+    
+    </ion-card>
+     -->
+  </div>
+ 
+</ion-content>

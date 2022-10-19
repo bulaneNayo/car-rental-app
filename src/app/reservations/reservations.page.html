@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" class="menu"></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title class="title">Reserve a Car</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+  <ion-searchbar placeholder="search for a car" [formControl]="searchField" debounce="500" animated class="myserach"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let vehicle of vehicles | async">
+      <ion-thumbnail>
+        <ion-img [src]="vehicle.image"></ion-img>
+      </ion-thumbnail>
+       <ion-label class="mylabel">
+        <b>{{vehicle.name}}</b><br>
+        <p><b>Model :</b> {{vehicle.model}}</p>
+        <p><b>M{{vehicle.price}} per hour</b></p><br>
+        <p><b>Mileage :</b>{{vehicle.mileage}}</p> 
+      </ion-label>
+      <ion-row slot="end" class="myrow">
+        <ion-col size="5">
+          <ion-button (click)="book()">Book Now</ion-button>
+        </ion-col>
+      </ion-row>
+      </ion-item>
+      </ion-list>
+    
+</ion-content>

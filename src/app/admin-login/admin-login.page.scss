@@ -1,0 +1,51 @@
+.btn{
+    background-color:  white    ;
+    color: black;
+    text-transform: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 4px;
+    margin-left: 25%;
+    font-size: large;
+    margin-top: 20px;
+}
+.title{
+    color:white;
+    margin-left: 30px;
+
+}
+
+.danger-alert{
+    color: red;
+    font-size: 12px;
+  }
+.container{
+    box-shadow: none;
+    margin-top: 30px;
+    
+}
+.link1{
+    margin-left: 225px;
+    text-decoration: none;
+    margin-top: 50px;
+    color:rgb(0, 157, 255);
+}
+
+.header{
+    position: relative;
+    bottom: 2px;
+    --ion-background-color:rgb(0, 157, 255);
+    height: 70px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.content{
+    --ion-background-color: rgba(7, 6, 16, 0.693);
+    border-top-right-radius: 24px;
+    border-radius: 2px;
+
+}
+.label{
+    color: white;
+
+}

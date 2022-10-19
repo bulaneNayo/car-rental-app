@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" class="menu"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="Logout()" class="logout">
+        Logout
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="contents">
+  <form [formGroup]="validations_form" (ngSubmit)="login(validations_form.value)">
+    <ion-card class="container">
+      <ion-item class="form-item">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <div class="danger-alert">
+        <ng-container *ngFor="let validation of validation_messages.email">
+          <div class="error-message"
+            *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+
+      <ion-item class="form-item">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password" class="form-controll" required></ion-input>
+      </ion-item>
+      <div class="danger-alert">
+        <ng-container *ngFor="let validation of validation_messages.password">
+          <div class="error-message"
+            *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+            {{ validation.message }}
+          </div>
+        </ng-container>
+      </div>
+      
+    </ion-card>
+    <ion-button [disabled]="!validations_form.valid" type="submit" expand="block" class="mybtn">Log In</ion-button>
+  
+    <ion-item class="signup">
+      <a a href="/admin-login" class="para">Admin?</a>
+     <!--  <a href="/admin-login" class="link2">Admin?</a> -->
+      <a (click)="recover(validations_form.value)" class="link1">Forgot password?</a> 
+      </ion-item>
+    
+    <ion-item class="signup">
+      <p>Don't have an account?</p>
+      <a href="/user-register" class="reg">Signup</a>
+    </ion-item>  
+    
+  <!-- <ion-button type="submit" shape="round" expand="block" color="danger" routerLink="/user-register">Sign Up</ion-button>
+ -->  </form>
+</ion-content>

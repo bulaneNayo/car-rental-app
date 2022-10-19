@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu" class="menu"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="Logout()" class="logout">
+        Logout
+      </ion-button>
+    </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="mytabs">
+    <input type="radio" id="tabUpcoming" name="mytabs" checked="checked">
+    <label for="tabUpcoming">Upcoming</label>
+    <div class="tab">
+      <h3 class="name">Reservation details</h3>
+      <ion-card class="mycard">
+        <table class="tables">
+          <tr>
+            <td>
+              <p class="paragraph">Reservation number:</p>
+            </td>
+            <td>
+              <p class="value">6zA6VK0UrzHcCYDvpJsi</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="paragraph">Reservation status:</p>
+            </td>
+            <td>
+              <p class="valueOf">PENDING</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <p class="paragraph">Number of vehicles:</p>
+            </td>
+            <td>
+              <p class="value3">1</p>
+            </td>
+          </tr>
+
+        </table>
+        
+      </ion-card>
+      <ion-card class="cards">
+        <ion-item>
+          <table>
+            <tr>
+              <td>
+                <p><a class="links">Cancel This Reservation?</a></p>
+              </td>
+            </tr>
+          </table>
+        </ion-item>
+      </ion-card>
+    </div>
+    <input type="radio" id="tabCompleted" name="mytabs">
+    <label for="tabCompleted">Completed</label>
+    <div class="tab">
+      <h3 class="name">Reservation details</h3>
+      <ion-card class="mycard">
+        <table class="tables">
+          <tr>
+            <td>
+              <p class="paragraph">Reservation number:</p>
+            </td>
+            <td class="thisTT">
+              <p class="value">6zA6VK0UrzHcCYDvpJsi</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="paragraph">Reservation status:</p>
+            </td>
+            <td>
+              <p class="value1">APPROVED</p>
+            </td>
+          </tr>
+        </table>
+      </ion-card>
+      <button class="mybtn2">Cancel Reservation?</button>
+      <button (click)="addFeeback()" class="mybtn">Leave Feedback?</button>
+    </div>
+    <input type="radio" id="tabCancelled" name="mytabs">
+    <label for="tabCancelled">Cancelled</label>
+    <div class="tab">
+      <ion-list>
+        <ion-item *ngFor="let r of reservations | async">
+          <ion-label>
+            <p>Reservation number: {{r.id}}</p>
+            <p>Reservation status:{{r.status}}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>

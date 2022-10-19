@@ -1,0 +1,51 @@
+.form-item{
+    margin: 20px;
+}
+.avatar{
+    --ion-background-color:white;
+}
+.href{
+    margin: 40px;
+
+}
+.container{
+    border-radius: 2px;
+    box-shadow: none;
+}
+.header{
+    position: relative;
+    bottom: 2px;
+    --ion-background-color:rgb(0, 157, 255);
+    height: 70px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+
+       
+}
+.icon{
+    margin-right: 4px;
+}
+.danger-alert{
+    color: red;
+    font-size: 12px;
+    
+}
+.btn{
+    --ion-background-color:  rgb(12, 65, 65);
+    color: rgb(245, 245, 248);
+    text-transform: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.link{
+    color:rgb(0, 157, 255);
+}
+.text{
+    color: white;
+}
+
+
+.menu{
+    color:white;
+    font-weight: border;
+}  

@@ -1,0 +1,76 @@
+
+ion-fab {
+    button {
+        box-shadow: 0 4px 10px #6b6b6b;
+    }
+
+    ion-fab-list button[ion-fab] {
+        text-align: center;
+        overflow: visible;
+
+        div.label {
+          position: absolute;
+          right: 48px;
+          background: rgba(248, 248, 248, 1);
+          height: 24px;
+          line-height: 16px;
+          padding-left: 8px;
+          padding-right: 8px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          margin-top: 8px;
+          border-radius: 5px;
+          box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .button-inner {
+        overflow: visible;
+    }
+}
+.contain{
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.mybutton{
+    size: 45px;
+}
+.fabb{
+    --ion-background:rgb(0, 157, 255);
+    margin-right: 20px;
+}
+.menu{
+    color:white;
+    font-weight: border;
+}  
+
+.logout{
+    
+    color:white;
+    font-weight: border;
+}
+.header{
+    position: relative;
+    bottom: 2px;
+    --ion-background-color:rgb(0, 157, 255);
+    height: 70px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.itembutton{
+    border: solid rgb(69, 190, 209);
+    --ion-background-color: aliceblue;
+    color:rgb(61, 2, 2);
+    border-radius: 5px;
+    width: 280px;
+    height: 50px;
+}
+.item{
+    border-style:solid 1px red;
+    margin: 30px;
+    border: radius 4px;
+}
+/* .myAlert{
+    --ion-background:rgb(0, 157, 255);
+} */
